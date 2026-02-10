@@ -3,6 +3,7 @@ import '../styles/ExplorePage.css';
 import MapComponent from './MapComponent';
 import BreakdownList from './BreakdownList';
 import { fetchSpeciesInRadius } from '../services/inaturalist';
+import { saveSearch } from '../services/firebase-service';
 
 function ExplorePage({ searchLocation, selectedRadius, setSelectedRadius, onSearch }) {
   const [speciesData, setSpeciesData] = useState([]);
@@ -34,6 +35,9 @@ function ExplorePage({ searchLocation, selectedRadius, setSelectedRadius, onSear
           selectedRadius
         );
         setSpeciesData(data);
+
+        // Save search to Firestore (fire-and-forget)
+        saveSearch(currentLocation, selectedRadius, data.length);
       } catch (err) {
         console.error('Error fetching species:', err);
         setError('Failed to load species data');
