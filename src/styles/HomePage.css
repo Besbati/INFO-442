@@ -1,0 +1,35 @@
+.home-page {
+  position: relative;
+  flex: 1;
+  height: calc(100vh - 80px - 50px);
+  overflow: hidden;
+}
+
+.home-search-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 500;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  width: auto;
+  max-width: 90%;
+}
+
+.home-search-overlay .search-container {
+  width: 400px;
+  max-width: none;
+}
+
+@media (max-width: 768px) {
+  .home-search-overlay {
+    flex-direction: column;
+    width: 90%;
+  }
+
+  .home-search-overlay .search-container {
+    width: 100%;
+  }
+}

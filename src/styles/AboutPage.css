@@ -1,0 +1,133 @@
+.about-page {
+  flex: 1;
+  background: linear-gradient(to bottom, #b3d9e6 0%, #d4f1d4 100%);
+  min-height: calc(100vh - 80px);
+  overflow-y: auto;
+  padding: 3rem 2rem;
+}
+
+.about-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.about-title {
+  font-size: 2rem;
+  color: var(--black);
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.about-section {
+  background-color: var(--white);
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.section-title {
+  font-size: 1.3rem;
+  color: var(--forest-green);
+  margin: 0 0 1rem 0;
+}
+
+.section-text {
+  color: var(--medium-grey);
+  line-height: 1.6;
+  margin: 0 0 1rem 0;
+  font-size: 1rem;
+}
+
+.section-text:last-child {
+  margin-bottom: 0;
+}
+
+.problem-list,
+.solution-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 1rem 0 0 0;
+}
+
+.problem-list li,
+.solution-list li {
+  margin-bottom: 0.75rem;
+  padding-left: 1.5rem;
+  position: relative;
+  color: var(--medium-grey);
+  line-height: 1.6;
+}
+
+.problem-list li::before,
+.solution-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--forest-green);
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.goals-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.goal-card {
+  background-color: var(--white);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.goal-title {
+  font-size: 1.1rem;
+  color: var(--black);
+  margin: 0 0 0.75rem 0;
+}
+
+.goal-text {
+  color: var(--medium-grey);
+  line-height: 1.6;
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.cta-section {
+  background-color: var(--forest-green);
+  text-align: center;
+}
+
+.cta-title {
+  font-size: 1.5rem;
+  color: var(--white);
+  margin: 0 0 1rem 0;
+}
+
+.cta-text {
+  color: var(--white);
+  line-height: 1.6;
+  margin: 0;
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .about-page {
+    padding: 2rem 1rem;
+  }
+
+  .about-title {
+    font-size: 1.5rem;
+  }
+
+  .about-section {
+    padding: 1.5rem;
+  }
+
+  .goals-grid {
+    grid-template-columns: 1fr;
+  }
+}

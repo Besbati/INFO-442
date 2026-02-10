@@ -1,0 +1,132 @@
+.search-container {
+  position: relative;
+  width: 100%;
+}
+
+.search-container.in-nav {
+  width: 100%;
+  max-width: 400px;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  background-color: var(--white);
+  border-radius: 50px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  width: 100%;
+}
+
+.search-container.in-nav .search-bar {
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.search-input {
+  flex: 1;
+  padding: 0.75rem 1.25rem;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  background: transparent;
+  color: var(--black);
+}
+
+.search-input::placeholder {
+  color: var(--medium-grey);
+}
+
+.search-submit {
+  padding: 0.75rem 1.5rem;
+  background-color: var(--forest-green);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+  color: var(--black);
+}
+
+.search-submit:hover:not(:disabled) {
+  background-color: #1a6b1a;
+}
+
+.search-submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.search-submit svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* Search results info */
+.search-results-info {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--forest-green);
+  text-align: center;
+  font-weight: 600;
+}
+
+/* Error message */
+.error-message {
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--white);
+  border: 2px solid var(--black);
+  border-radius: 12px;
+  padding: 1rem 1.5rem;
+  min-width: 300px;
+  max-width: 400px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 100;
+  animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+.error-icon {
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  width: 30px;
+  height: 30px;
+  background-color: #DC143C;
+  color: var(--black);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.error-content {
+  text-align: center;
+}
+
+.error-title {
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-bottom: 0.25rem;
+  color: var(--black);
+}
+
+.error-text {
+  font-size: 0.9rem;
+  color: var(--black);
+}

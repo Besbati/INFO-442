@@ -1,0 +1,98 @@
+.radius-selector {
+  position: relative;
+}
+
+.radius-button {
+  padding: 0.75rem 1.5rem;
+  background-color: var(--white);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  color: var(--black);
+}
+
+.radius-selector.compact .radius-button {
+  padding: 0.75rem 1rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.radius-button:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.arrow {
+  transition: transform 0.3s ease;
+  font-size: 0.8rem;
+}
+
+.arrow.down {
+  transform: rotate(0deg);
+}
+
+.arrow.up {
+  transform: rotate(180deg);
+}
+
+.radius-dropdown {
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  right: 0;
+  background-color: var(--white);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  min-width: 150px;
+  overflow: hidden;
+  z-index: 100;
+}
+
+.radius-option {
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: background-color 0.2s ease;
+  color: var(--black);
+}
+
+.radius-option:hover {
+  background-color: var(--light-grey);
+  border-radius: 8px;
+  margin: 0 0.25rem;
+}
+
+.radius-option.selected {
+  background-color: var(--light-green);
+  color: var(--forest-green);
+  border-radius: 8px;
+  margin: 0 0.25rem;
+}
+
+.checkmark {
+  font-weight: bold;
+}
+
+.custom-input-container {
+  padding: 0.5rem;
+  border-top: 1px solid var(--light-grey);
+}
+
+.custom-input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid var(--light-grey);
+  border-radius: 8px;
+  font-size: 0.9rem;
+  outline: none;
+}
+
+.custom-input:focus {
+  border-color: var(--forest-green);
+}
