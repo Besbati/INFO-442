@@ -12,10 +12,71 @@
   transform: translate(-50%, -50%);
   z-index: 500;
   display: flex;
+  flex-wrap: wrap;
   gap: 0.5rem;
   align-items: center;
+  justify-content: center;
   width: auto;
   max-width: 90%;
+}
+
+.recent-searches {
+  width: 100%;
+  background-color: var(--white);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  padding: 0.75rem 1rem;
+  margin-top: 0.25rem;
+}
+
+.recent-searches-title {
+  margin: 0 0 0.5rem 0;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--forest-green);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.recent-searches-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.recent-search-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0.4rem 0.5rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+  border-radius: 4px;
+  text-align: left;
+  font-size: 0.85rem;
+  color: #333;
+  transition: background-color 0.15s;
+}
+
+.recent-search-item:hover {
+  background-color: var(--light-grey);
+}
+
+.recent-search-name {
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 200px;
+}
+
+.recent-search-meta {
+  font-size: 0.75rem;
+  color: #888;
+  white-space: nowrap;
+  margin-left: 1rem;
 }
 
 .home-search-overlay .search-container {
